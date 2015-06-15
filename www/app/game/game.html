@@ -1,0 +1,20 @@
+<ion-view view-title="Game">
+  <ion-content class="padding">
+    <div ng-hide="ctrl.question">
+      <h2>Wait for it</h2>
+    </div>
+    <div ng-show="ctrl.question">
+      <h2>Question: {{ ctrl.question.body }}</h2>
+      <ion-list>
+        <ion-radio ng-repeat="answer in ctrl.question.answers"
+          ng-model="ctrl.answerId"
+          ng-click="ctrl.answer()"
+          ng-disabled="ctrl.answerId !== null"
+          ng-value="answer.id">
+          {{ answer.body }}
+        </ion-radio>
+      </ion-list>
+    </div>
+  </ion-content>
+  <qz-winners></qz-winners>
+</ion-view>

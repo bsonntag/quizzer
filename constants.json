@@ -1,0 +1,8 @@
+{
+  "local": {
+    "quizHost": "http://localhost:3000"
+  },
+  "production": {
+    "quizHost": "http://178.62.80.104:3000"
+  }
+}

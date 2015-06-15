@@ -1,0 +1,12 @@
+<div class='winners-modal-dialog' ng-class="{'is-hidden': ctrl.show}">
+  <ion-content class="padding has-header">
+    <h2>Winners</h2>
+    <p ng-show="ctrl.winners.length === 0">There are no winners.</p>
+    <p ng-show="ctrl.currentPlayerWon()">Congratulations! You got it right!</p>
+    <ion-list>
+      <ion-item ng-repeat="winner in ctrl.winners" type="item-text-wrap">
+        <p>{{ winner.username }}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</div>
